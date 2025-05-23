@@ -15,6 +15,7 @@ export function App() {
       <Header />
 
       <div className={styled.wrapper}>
+        
         <aside>
           <Sidebar />
         </aside>
@@ -22,6 +23,7 @@ export function App() {
           {PostJson.map(post => {
             return (
               <Post 
+              key={post.id}
               author={post.author}
               content={post.content}
               publishedAt={post.publishedAt}
